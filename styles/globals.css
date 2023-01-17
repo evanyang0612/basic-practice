@@ -1,4 +1,25 @@
-:root {
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 6.6px;
+  }
+}
+
+@media screen and(max-width:768px) {
+  html {
+    font-size: 7.8px;
+  }
+}
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +125,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */

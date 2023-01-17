@@ -1,0 +1,157 @@
+.container {
+  width: 100%;
+}
+
+.video {
+  object-fit: cover;
+  width: 100%;
+}
+
+.section1 {
+  margin-bottom: 48rem;
+}
+
+.section2 {
+  position: relative;
+  margin-bottom: 40rem;
+}
+
+.gallery {
+  overflow: hidden;
+}
+
+.text {
+  font-family: "Noto serif";
+  font-weight: 400;
+  line-height: 6.5rem;
+  text-align: center;
+  font-size: 4.8rem;
+}
+
+.shortText {
+  display: block;
+}
+
+.image1 {
+  position: absolute;
+  left: 0rem;
+  bottom: -23.4rem;
+}
+
+.image2 {
+  position: absolute;
+  right: 18.2rem;
+  bottom: -36rem;
+}
+
+.image3 {
+  position: absolute;
+  right: 0rem;
+  bottom: -7.5rem;
+}
+
+.image4 {
+  position: absolute;
+  right: 27.1rem;
+  bottom: 30rem;
+}
+
+.image5 {
+  position: absolute;
+  top: -40rem;
+  left: 72rem;
+}
+
+.image6 {
+  position: absolute;
+  left: 5rem;
+  top: -20rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section1 {
+    height: 100vh;
+    margin-bottom: 132rem;
+    position: relative;
+  }
+  .video {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -25%);
+  }
+
+  .gallery {
+    overflow: hidden;
+  }
+
+  .image1 {
+    transform: scale(0.7) translate(-30rem, 20rem);
+  }
+
+  .image2 {
+    transform: scale(0.7) translate(40rem, 10rem);
+  }
+
+  .image3 {
+    transform: scale(0.7) translate(15rem, 0rem);
+  }
+
+  .image4 {
+    transform: scale(0.7) translate(40rem, 20rem);
+  }
+
+  .image5 {
+    transform: scale(0.7) translate(-150rem, -20rem);
+  }
+
+  .image6 {
+    transform: scale(0.7) translate(-30rem, 0rem);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section1 {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+  }
+  .section2 {
+    width: 100vw;
+  }
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -25%);
+  }
+
+  .gallery {
+    overflow: hidden;
+  }
+
+  .image1 {
+    transform: scale(0.5) translate(-80rem, 30rem);
+  }
+
+  .image2 {
+    transform: scale(0.5) translate(55rem, 20rem);
+  }
+
+  .image3 {
+    transform: scale(0.5) translate(25rem, -20rem);
+  }
+
+  .image4 {
+    transform: scale(0.5) translate(51rem, 18rem);
+  }
+
+  .image5 {
+    transform: scale(0.5) translate(-150rem, -20rem);
+  }
+
+  .image6 {
+    transform: scale(0.5) translate(-30rem, 0rem);
+  }
+}
