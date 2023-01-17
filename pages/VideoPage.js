@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { isServer } from "next/config";
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import styles from "../styles/index.module.css";
 
 const VideoPage = () => {
@@ -31,24 +32,14 @@ const VideoPage = () => {
     }
   }, []);
 
-  useEffect(() => {
-    // 建立 IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      // const entry = entries[0];
-      entries.forEach((entry) => {
-        // 如果影片出現在畫面中，則播放影片
-        if (entry.isIntersecting) {
-          videoRef.current.play();
-        } else {
-          videoRef.current.pause();
-        }
-      });
-    });
-    // 監控影片元素
-    observer.observe(videoRef.current);
-    // 在元件卸載時，關閉 IntersectionObserver
-    return () => observer.disconnect();
-  }, []);
+  function handleIntersecting(isIntersecting) {
+    if (isIntersecting) {
+      videoRef.current.play()
+    } else {
+      videoRef.current.pause()
+    }
+  }
+  useIntersectionObserver(videoRef, handleIntersecting)
 
   return (
     <>
@@ -56,7 +47,7 @@ const VideoPage = () => {
         className={styles.video}
         ref={videoRef}
         src={videoSrc}
-        autoPlay
+        // autoPlay
         loop
         muted
         poster="../images/video-placeholder@desktop.png"
